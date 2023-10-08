@@ -4,7 +4,8 @@ body, html {
   }
   
   .background-image {
-    background-image: url('your-image.jpg'); /* 替換成你的圖片路徑 */
+    position: relative;
+    background-image: url('carla_birdview.png'); /* 替換成你的圖片路徑 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,4 +13,97 @@ body, html {
     color: white; /* 文字顏色，可以根據需要調整 */
     text-align: center;
     padding: 20px; /* 可以根據需要調整內容區塊的內邊距 */
+    opacity: 0;
+    animation: fadeIn  2s ease-in-out forwards;
   }
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }  
+@keyframes movepoint {
+	25% {
+		top: 77%
+	}
+	100%{
+		top: 78%
+	}
+}
+  .position-fix {
+    position: absolute;
+    top: 78%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
+    left: 50%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
+    transform: translate(-50%, -50%); /* 用來將物件置中 */
+    animation: movepoint 2s infinite;
+	-webkit-animation: movepoint 2s infinite;
+  }
+  .btn {
+    display: block;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.625rem;
+    letter-spacing: 0.3em;
+    color: rgba(223,190,106,0.7);
+    border-radius: 0;
+    padding: 18px 40px 20px;
+    -webkit-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    background: -webkit-linear-gradient(180deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+    background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    text-decoration: none;
+    margin: 0.625rem;
+    border: none;
+    border: 1px solid rgba(223,190,106,0.3);
+  }
+  .btn:hover {
+    color: #fff;
+    border: 1px solid rgba(223,190,106,0);
+    color: $white;
+    background-position: 99% 50%;
+  }
+  body {
+    background: #231f20;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arials, sans;
+  }
+  article {
+    height: 100vh;
+  }
+  div.center {
+    text-align: center;
+    *zoom: 1;
+    width: auto;
+    max-width: 800px;
+    float: none;
+    display: block;
+    margin-left: 900pt;
+    margin-top: 50pt;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    /* top: 50%; */
+    /* -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); */
+  }
+  div.center:before,
+  div.center:after {
+    content: '';
+    display: table;
+  }
+  div.center:after {
+    clear: both;
+  }
+  img {
+    max-width: 20%; /* 保證圖片最大寬度不超過容器寬度 */
+    height: auto; /* 保持原始圖片高寬比例 */
+    display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
+    margin: 0 auto; /* 水平居中 */
+    /* position: absolute; 
+    top: 100;
+    left: 1000;  */
+  }
+  
