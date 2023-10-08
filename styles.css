@@ -1,4 +1,5 @@
 body, html {
+    position: relative;
     height: 100%;
     margin: 0;
   }
@@ -20,18 +21,124 @@ body, html {
     to {
       opacity: 1;
     }
+  }
+  .construct-container {
+    position: absolute;
+    top: 45%; 
+    left: 48%; 
+    transform: translate(-50%, -50%); 用來將物件置中
+  }
+  .accident-container {
+    position: absolute;
+    top: 58%; 
+    left: 55%; 
+    transform: translate(-50%, -50%); 用來將物件置中
+  }
+  .position-container {
+    position: absolute;
+    top: 70%; 
+    left: 48.3%; 
+    transform: translate(-50%, -50%); 用來將物件置中
+  }
+  .ripple {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    animation: rippleAnimation 2s linear infinite;
+  }
+  
+  .ripple:nth-child(2) {
+    animation-delay: 1.5s; 
+  }
+  
+  @keyframes rippleAnimation {
+    0% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  .construct-ripple{
+    border: 4px solid #fdc23e;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+  .position-ripple{
+    border: 4px solid #000000;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+.accident-ripple{
+    border: 4px solid #fd3e3e;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+.transparent-box2 {
+    position: absolute;
+    top: 50%; 
+    left: 55%; 
+    background-color: rgba(255, 255, 255, 0.65); 
+    padding: 30px;
+    box-sizing: border-box; 
+    border: 1px solid #3f4040;
+    box-shadow: 12px 12px 2px rgba(0, 0, 0, 0.3);
   }  
+.transparent-box2 p {
+    margin: 0; 
+    color: #000000;
+    font-family: "cwtexfangsong", Helvetica, Arials, sans;
+    font-size: 1.5em;
+  } 
+.transparent-box {
+    position: absolute;
+    top: 38%; 
+    left: 38%; 
+    background-color: rgba(255, 255, 255, 0.65); 
+    padding: 30px;
+    box-sizing: border-box; 
+    border: 1px solid #3f4040;
+    box-shadow: 12px 12px 2px rgba(0, 0, 0, 0.3);
+  }  
+.transparent-box p {
+    margin: 0; 
+    color: #000000;
+    font-family: "cwtexfangsong", Helvetica, Arials, sans;
+    font-size: 1.5em;
+  } 
+.construct{
+    position: absolute;
+    top: 38%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
+    left: 38%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
+    transform: translate(-50%, -50%); /* 用來將物件置中 */
+}
+.con-img{
+    max-width: 45%; /* 保證圖片最大寬度不超過容器寬度 */
+    height: auto; /* 保持原始圖片高寬比例 */
+    display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
+    margin: 0 auto; /* 水平居中 */
+    
+}
 @keyframes movepoint {
 	25% {
-		top: 77%
+		top: 69%
 	}
 	100%{
-		top: 78%
+		top: 70%
 	}
 }
   .position-fix {
     position: absolute;
-    top: 78%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
+    top: 70%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
     left: 50%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
     transform: translate(-50%, -50%); /* 用來將物件置中 */
     animation: movepoint 2s infinite;
@@ -97,8 +204,8 @@ body, html {
   div.center:after {
     clear: both;
   }
-  img {
-    max-width: 20%; /* 保證圖片最大寬度不超過容器寬度 */
+  .pos-img {
+    max-width: 10%; /* 保證圖片最大寬度不超過容器寬度 */
     height: auto; /* 保持原始圖片高寬比例 */
     display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
     margin: 0 auto; /* 水平居中 */
@@ -106,4 +213,18 @@ body, html {
     top: 100;
     left: 1000;  */
   }
-  
+.accident{
+    position: absolute;
+    top: 50%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
+    left: 55%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
+    transform: translate(-50%, -50%); /* 用來將物件置中 */
+}
+  .acc-img {
+    max-width: 9%; /* 保證圖片最大寬度不超過容器寬度 */
+    height: auto; /* 保持原始圖片高寬比例 */
+    display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
+    margin: 0 auto; /* 水平居中 */
+    /* position: absolute; 
+    top: 100;
+    left: 1000;  */
+  }
