@@ -1,0 +1,15 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .background-image {
+    background-image: url('your-image.jpg'); /* 替換成你的圖片路徑 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* 100%視窗高度 */
+    color: white; /* 文字顏色，可以根據需要調整 */
+    text-align: center;
+    padding: 20px; /* 可以根據需要調整內容區塊的內邊距 */
+  }
