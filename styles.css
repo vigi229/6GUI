@@ -3,17 +3,29 @@ body, html {
     height: 100%;
     margin: 0;
   }
-  
-  .background-image {
+  .background-image2 {
     position: relative;
-    background-image: url('carla_birdview.png'); /* 替換成你的圖片路徑 */
+    background-image: url('first_perspective.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* 100%視窗高度 */
-    color: white; /* 文字顏色，可以根據需要調整 */
+    height: 100vh; 
+    color: white; 
     text-align: center;
-    padding: 20px; /* 可以根據需要調整內容區塊的內邊距 */
+    padding: 20px; 
+    opacity: 0;
+    animation: fadeIn  2s ease-in-out forwards;
+  }
+  .background-image {
+    position: relative;
+    background-image: url('carla_birdview.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    color: white; 
+    text-align: center;
+    padding: 20px; 
     opacity: 0;
     animation: fadeIn  2s ease-in-out forwards;
   }
@@ -86,7 +98,7 @@ body, html {
 .transparent-box2 {
     position: absolute;
     top: 50%; 
-    left: 55%; 
+    left: 57%; 
     background-color: rgba(255, 255, 255, 0.65); 
     padding: 30px;
     box-sizing: border-box; 
@@ -138,23 +150,25 @@ body, html {
 }
   .position-fix {
     position: absolute;
-    top: 70%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
-    left: 50%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
-    transform: translate(-50%, -50%); /* 用來將物件置中 */
+    top: 70%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
     animation: movepoint 2s infinite;
 	-webkit-animation: movepoint 2s infinite;
   }
   .btn {
+    position: relative;
+    width: 300px;
     display: block;
     background: transparent;
     text-transform: uppercase;
     font-weight: normal;
     font-style: normal;
     font-size: 0.625rem;
-    letter-spacing: 0.3em;
-    color: rgba(223,190,106,0.7);
-    border-radius: 0;
-    padding: 18px 40px 20px;
+    letter-spacing: 0.5em;
+    color: rgba(239, 239, 226, 0.9);
+    border-radius: 2;
+    padding: 18px 5px 20px;
     -webkit-transition: all 0.7s ease-out;
     transition: all 0.7s ease-out;
     background: -webkit-linear-gradient(180deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
@@ -164,7 +178,7 @@ body, html {
     text-decoration: none;
     margin: 0.625rem;
     border: none;
-    border: 1px solid rgba(223,190,106,0.3);
+    border: 3px solid rgba(223,190,106,0.5);
   }
   .btn:hover {
     color: #fff;
@@ -175,26 +189,32 @@ body, html {
   body {
     background: #231f20;
     color: #fff;
-    font-family: "Helvetica Neue", Helvetica, Arials, sans;
+    font-family: "Helvetica Neue", cwtexfangsong, Arials, sans;
   }
   article {
     height: 100vh;
   }
-  div.center {
+  div.overlay-box {
     text-align: center;
     *zoom: 1;
-    width: auto;
-    max-width: 800px;
+    width: 350px;
+    height: 200px;
+    /* max-width: 800px; */
     float: none;
-    display: block;
-    margin-left: 900pt;
-    margin-top: 50pt;
+    background-color: rgba(0, 0, 0, 0.2);
     padding-left: 0;
     padding-right: 0;
     position: relative;
-    /* top: 50%; */
-    /* -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); */
+    top: 20%;
+    left: 80%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    float: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   div.center:before,
   div.center:after {
@@ -216,7 +236,7 @@ body, html {
 .accident{
     position: absolute;
     top: 50%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
-    left: 55%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
+    left: 57%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
     transform: translate(-50%, -50%); /* 用來將物件置中 */
 }
   .acc-img {
@@ -224,7 +244,25 @@ body, html {
     height: auto; /* 保持原始圖片高寬比例 */
     display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
     margin: 0 auto; /* 水平居中 */
-    /* position: absolute; 
-    top: 100;
-    left: 1000;  */
   }
+.sidebar{
+  position: absolute;
+  text-transform: uppercase;
+  font-family: "cwtexfangsong ", Arials, sans;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.9rem;
+  letter-spacing: 0.5em;
+  width: 500px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.7);
+  left:-500px;
+  transition: right 1s ease-in-out;
+}
+.hidden {
+  display: none;
+}
