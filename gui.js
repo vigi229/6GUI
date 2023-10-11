@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const sidebar2 = d3.select("#sb2");
     const toggleBtn1 = d3.select("#toggleBtn1");
     const toggleBtn2 = d3.select("#toggleBtn2");
-    const elementsToToggle = d3.selectAll(".construct-container, .transparent-box, .construct, .accident-container, .transparent-box2, .accident, .position-container, .position-fix");
+    const elementsToToggle = d3.selectAll(".construct-container, .transparent-box-acc, .construct, .accident-container, .transparent-box-con, .accident, .position-container1, .pos1");
+
     elementsToToggle.classed("hidden", true);
     toggleBtn1.on("click", function() {
         elementsToToggle.classed("hidden", true);

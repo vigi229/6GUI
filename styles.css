@@ -3,9 +3,22 @@ body, html {
     height: 100%;
     margin: 0;
   }
+  .background-image3 {
+    position: relative;
+    background-image: url('automobile_view_outside_s2.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    color: white; 
+    text-align: center;
+    padding: 20px; 
+    opacity: 0;
+    animation: fadeIn  2s ease-in-out forwards;
+  }
   .background-image2 {
     position: relative;
-    background-image: url('first_perspective.png'); 
+    background-image: url('automobile_view_outside_s1.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +31,7 @@ body, html {
   }
   .background-image {
     position: relative;
-    background-image: url('carla_birdview.png'); 
+    background-image: url('BEV2.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,25 +49,31 @@ body, html {
   }
   .construct-container {
     position: absolute;
-    top: 45%; 
-    left: 48%; 
+    top: 30%; 
+    left: 59%; 
     transform: translate(-50%, -50%); 用來將物件置中
   }
   .accident-container {
     position: absolute;
-    top: 58%; 
-    left: 55%; 
+    top: 50%; 
+    left: 50%; 
     transform: translate(-50%, -50%); 用來將物件置中
   }
-  .position-container {
+  .position-container1 {
     position: absolute;
-    top: 70%; 
-    left: 48.3%; 
+    top: 50%; 
+    left: 66.5%; 
+    transform: translate(-50%, -50%); 用來將物件置中
+  }
+  .position-container2 {
+    position: absolute;
+    top: 50%; 
+    left: 43.87%; 
     transform: translate(-50%, -50%); 用來將物件置中
   }
   .ripple {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     border-radius: 50%;
     animation: rippleAnimation 2s linear infinite;
@@ -95,33 +114,49 @@ body, html {
     left: 50%; 
     transform: translate(-50%, -50%); 
   }
-.transparent-box2 {
+.transparent-box-acc {
     position: absolute;
-    top: 50%; 
-    left: 57%; 
+    top: 59%; 
+    left: 48%; 
     background-color: rgba(255, 255, 255, 0.65); 
     padding: 30px;
     box-sizing: border-box; 
     border: 1px solid #3f4040;
     box-shadow: 12px 12px 2px rgba(0, 0, 0, 0.3);
   }  
-.transparent-box2 p {
+.transparent-box-acc p {
     margin: 0; 
     color: #000000;
     font-family: "cwtexfangsong", Helvetica, Arials, sans;
     font-size: 1.5em;
   } 
-.transparent-box {
+.transparent-box-con {
     position: absolute;
-    top: 38%; 
-    left: 38%; 
+    top: 20%; 
+    left: 50%; 
     background-color: rgba(255, 255, 255, 0.65); 
     padding: 30px;
     box-sizing: border-box; 
     border: 1px solid #3f4040;
     box-shadow: 12px 12px 2px rgba(0, 0, 0, 0.3);
   }  
-.transparent-box p {
+.transparent-box-con p {
+    margin: 0; 
+    color: #000000;
+    font-family: "cwtexfangsong", Helvetica, Arials, sans;
+    font-size: 1.5em;
+  } 
+  .transparent-box-cng {
+    position: absolute;
+    top: 20%; 
+    left: 50%; 
+    background-color: rgba(255, 255, 255, 0.65); 
+    padding: 30px;
+    box-sizing: border-box; 
+    border: 1px solid #3f4040;
+    box-shadow: 12px 12px 2px rgba(0, 0, 0, 0.3);
+  }  
+.transparent-box-cng p {
     margin: 0; 
     color: #000000;
     font-family: "cwtexfangsong", Helvetica, Arials, sans;
@@ -129,32 +164,61 @@ body, html {
   } 
 .construct{
     position: absolute;
-    top: 38%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
-    left: 38%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
-    transform: translate(-50%, -50%); /* 用來將物件置中 */
-}
-.con-img{
-    max-width: 45%; /* 保證圖片最大寬度不超過容器寬度 */
-    height: auto; /* 保持原始圖片高寬比例 */
-    display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
-    margin: 0 auto; /* 水平居中 */
-    
-}
-@keyframes movepoint {
-	25% {
-		top: 69%
-	}
-	100%{
-		top: 70%
-	}
-}
-  .position-fix {
-    position: absolute;
-    top: 70%; 
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: movepoint 2s infinite;
-	-webkit-animation: movepoint 2s infinite;
+}
+.con-img{
+    max-width: 45%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    
+}
+.congestion{
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+.cng-img{
+  max-width: 4%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  
+}
+@keyframes movepoint1 {
+	25% {
+		top: 51%
+	}
+	100%{
+		top: 52%
+	}
+}
+@keyframes movepoint2 {
+	25% {
+		top: 50%
+	}
+	100%{
+		top: 51%
+	}
+}
+  .pos1{
+    animation: movepoint1 2s infinite;
+	-webkit-animation: movepoint1 2s infinite;
+    position: absolute;
+    top: 52%; 
+    left: 67.6%;
+    transform: translate(-50%, -50%);
+  }
+  .pos2{
+    animation: movepoint2 2s infinite;
+	-webkit-animation: movepoint2 2s infinite;
+    position: absolute;
+    top: 51%; 
+    left: 45%;
+    transform: translate(-50%, -50%);
   }
   .btn {
     position: relative;
@@ -201,7 +265,7 @@ body, html {
     height: 200px;
     /* max-width: 800px; */
     float: none;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     padding-left: 0;
     padding-right: 0;
     position: relative;
@@ -235,12 +299,12 @@ body, html {
   }
 .accident{
     position: absolute;
-    top: 50%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
-    left: 57%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
+    top: 59%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
+    left: 48%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
     transform: translate(-50%, -50%); /* 用來將物件置中 */
 }
   .acc-img {
-    max-width: 9%; /* 保證圖片最大寬度不超過容器寬度 */
+    max-width: 6%; /* 保證圖片最大寬度不超過容器寬度 */
     height: auto; /* 保持原始圖片高寬比例 */
     display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
     margin: 0 auto; /* 水平居中 */
@@ -251,12 +315,12 @@ body, html {
   font-family: "cwtexfangsong ", Arials, sans;
   font-weight: normal;
   font-style: normal;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   letter-spacing: 0.5em;
-  width: 500px;
+  width: 400px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  color:rgba(223,190,106,1);
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.7);
