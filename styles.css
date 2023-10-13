@@ -293,14 +293,36 @@ body, html {
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
-  div.center:before,
+  div.backmenu{
+    text-align: center;
+    *zoom: 1;
+    width: 350px;
+    height: 100px;
+    /* max-width: 800px; */
+    float: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    top: 90%;
+    left: 80%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    float: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  /* div.center:before,
   div.center:after {
     content: '';
     display: table;
   }
   div.center:after {
     clear: both;
-  }
+  } */
   .pos-img {
     max-width: 10%; /* 保證圖片最大寬度不超過容器寬度 */
     height: auto; /* 保持原始圖片高寬比例 */
