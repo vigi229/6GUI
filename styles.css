@@ -16,18 +16,19 @@ body, html {
     opacity: 0;
     animation: fadeIn  2s ease-in-out forwards;
   }
-  .background-image2 {
-    position: relative;
-    background-image: url('automobile_view_outside_s1.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; 
-    color: white; 
-    text-align: center;
-    padding: 20px; 
-    opacity: 0;
-    animation: fadeIn  2s ease-in-out forwards;
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+  video::-webkit-media-controls {
+    display: none;
   }
   .background-image {
     position: relative;
@@ -161,8 +162,8 @@ body, html {
   } 
   .transparent-box-cng {
     position: absolute;
-    top: 38%; 
-    left: 30%; 
+    top: 58%; 
+    left: 36%; 
     background-color: rgba(255, 255, 255, 0.65); 
     padding: 30px;
     box-sizing: border-box; 
@@ -186,12 +187,11 @@ body, html {
     height: auto;
     display: block;
     margin: 0 auto;
-    
 }
 .congestion{
   position: absolute;
-  top: 40%;
-  left: 30%;
+  top: 60%;
+  left: 36%;
   transform: translate(-50%, -50%);
 }
 .cng-img{
@@ -200,6 +200,18 @@ body, html {
   display: block;
   margin: 0 auto;
   
+}
+.flag{
+  position: absolute;
+  top: 7%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+.flag-img{
+  max-width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 @keyframes movepoint1 {
 	25% {
@@ -241,7 +253,7 @@ body, html {
     text-transform: uppercase;
     font-weight: normal;
     font-style: normal;
-    font-size: 0.625rem;
+    font-size: 0.8rem;
     letter-spacing: 0.5em;
     color: rgba(239, 239, 226, 0.9);
     border-radius: 2;
@@ -315,16 +327,8 @@ body, html {
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
-  /* div.center:before,
-  div.center:after {
-    content: '';
-    display: table;
-  }
-  div.center:after {
-    clear: both;
-  } */
   .pos-img {
-    max-width: 10%; /* 保證圖片最大寬度不超過容器寬度 */
+    max-width: 20%; /* 保證圖片最大寬度不超過容器寬度 */
     height: auto; /* 保持原始圖片高寬比例 */
     display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
     margin: 0 auto; /* 水平居中 */
@@ -340,6 +344,24 @@ body, html {
 }
   .acc-img {
     max-width: 6%; /* 保證圖片最大寬度不超過容器寬度 */
+    height: auto; /* 保持原始圖片高寬比例 */
+    display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
+    margin: 0 auto; /* 水平居中 */
+  }
+  .arrow{
+    position: absolute;
+    top: 53%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
+    left: 65%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
+    transform: translate(-50%, -50%); /* 用來將物件置中 */
+}
+.arrow2{
+  position: absolute;
+  top: 51.5%; /* 這裡的百分比值是相對於 .background-image 區域的高度的 */
+  left: 43%; /* 這裡的百分比值是相對於 .background-image 區域的寬度的 */
+  transform: translate(-50%, -50%); /* 用來將物件置中 */
+}
+  .arrow-img {
+    max-width: 12%; /* 保證圖片最大寬度不超過容器寬度 */
     height: auto; /* 保持原始圖片高寬比例 */
     display: block; /* 讓圖片成為塊級元素，避免行內元素的間距問題 */
     margin: 0 auto; /* 水平居中 */
